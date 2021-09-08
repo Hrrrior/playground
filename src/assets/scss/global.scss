@@ -1,0 +1,14 @@
+/* Only global styles should be imported here, component specific styles will
+/* be imported inside the component files.
+/* ------------------------------------------------------------------------------ */
+
+//Base
+// @import "base/reset";
+// @import "base/fonts";
+@import "base/base";
+// @import "base/links";
+// @import "base/loader";
+// @import "base/typography";
+
+//Layout
+@import "layout/global";
