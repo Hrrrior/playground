@@ -6,7 +6,7 @@
     background-color: $white;
     text-align: justify;
     border-radius: 2rem;
-    
+
     // @include mq($screen-s, max) {
     //     padding-left: 20px;
     //     padding-right: 20px;
@@ -16,26 +16,53 @@
 // .c-section {
 //     padding: 60px 0;
 //     color: $white;
-    // &--white {
-    //     background: $white;
-    //     color: $brand-black;
-    // }
-    // &--center {
-    //     text-align: center;
-    // }
-    // &__row {
-    //     &:not(:last-child) {
-    //         margin-bottom: 48px;
-    //     }
-    //     width: 70%;
-    //     margin: 0 auto;
-    // }
-    // @include mq($screen-m, max) {
-    //     &__row {
-    //         width: 100%;
-    //     }
-    //     &--center {
-    //         text-align: left;
-    //     }
-    // }
+// &--white {
+//     background: $white;
+//     color: $brand-black;
 // }
+// &--center {
+//     text-align: center;
+// }
+// &__row {
+//     &:not(:last-child) {
+//         margin-bottom: 48px;
+//     }
+//     width: 70%;
+//     margin: 0 auto;
+// }
+// @include mq($screen-m, max) {
+//     &__row {
+//         width: 100%;
+//     }
+//     &--center {
+//         text-align: left;
+//     }
+// }
+// }
+
+
+.l-section {
+    // border-bottom: 1px solid white;
+    // padding: 1rem;
+    height: 100vh;
+    scroll-snap-align: start;
+    text-align: center;
+    position: relative;
+
+    &:first-of-type {
+        height: calc(100vh - 27px);
+        padding: 27px 0 0 0;
+    }
+
+    &--sec1 {
+        background-image: url("./assets/images/bg1.jpg");
+        background-size: cover;
+
+    }
+
+    &--sec2 {
+        background-image: url("./assets/images/bg2.jpg");
+        background-size: cover;
+
+    }
+}

@@ -1,14 +1,17 @@
 import * as THREE from 'three'
 
 const scene = new THREE.Scene()
-const camera = new THREE.PerspectiveCamera(75, (window.innerWidth * 0.5) / (window.innerHeight * 0.5), 0.1, 1000)
+scene.background = new THREE.Color(0xbfe3dd)
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
 
-const renderer = new THREE.WebGLRenderer()
-renderer.setSize((window.innerWidth * 0.5), (window.innerHeight * 0.5))
-document.body.appendChild(renderer.domElement)
+const canvas = document.querySelector('canvas.webgl')
+console.log(canvas)
+const renderer = new THREE.WebGLRenderer({ canvas: canvas })
+// document.body.appendChild(renderer.domElement)
+renderer.setSize(window.innerWidth, window.innerHeight)
 
 const geometry = new THREE.BoxGeometry()
-const material = new THREE.MeshBasicMaterial({ color: '#FF69B4' })
+const material = new THREE.MeshBasicMaterial({ color: 'orange' })
 const cube = new THREE.Mesh(geometry, material)
 scene.add(cube)
 
@@ -25,7 +28,7 @@ const animate = function () {
 
 export default {
   name: 'Canvas',
-
+  // data () { return { box: renderer.domElement } },
   created () {
     animate()
   }

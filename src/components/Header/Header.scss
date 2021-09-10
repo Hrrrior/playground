@@ -1,0 +1,30 @@
+.c-header {
+    // display: flex;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    .c-menu {
+        display: flex;
+        text-transform: uppercase;
+        list-style-type: none;
+        margin: 0;
+        background-color: #333;
+        font-size: 1.5rem;
+        padding: 0;
+
+        li a {
+            color: $background;
+            text-decoration: none;
+            padding: 0 4px;
+            // padding: 2px 4px;
+            // margin: 0;
+
+            &.router-link-active {
+                background-color: green;
+            }
+        }
+
+
+    }
+}
