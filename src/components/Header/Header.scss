@@ -9,19 +9,20 @@
         text-transform: uppercase;
         list-style-type: none;
         margin: 0;
-        background-color: #333;
+        background-color: $brand-black;
         font-size: 1.5rem;
         padding: 0;
 
         li a {
-            color: $background;
+            color: $cream;
             text-decoration: none;
             padding: 0 4px;
             // padding: 2px 4px;
             // margin: 0;
 
             &.router-link-active {
-                background-color: green;
+                background-color: $cream;
+                color: $brand-black;
             }
         }
 
