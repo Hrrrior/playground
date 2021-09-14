@@ -5,7 +5,8 @@
 
 // // import { get } from 'core-js/core/dict'
 
-// weather.setAPPID('febc2da9d07dbf069697ad412cd7ea92')
+const api = process.env.VUE_APP_WEATHER_API
+console.log(api)
 export default {
   name: 'Weather',
   data () {
@@ -13,7 +14,7 @@ export default {
   },
   methods: {
     getWeather: function () {
-      fetch('https://api.openweathermap.org/data/2.5/weather?id=588409&appid=febc2da9d07dbf069697ad412cd7ea92&units=metric')
+      fetch('https://api.openweathermap.org/data/2.5/weather?id=588409&appid=' + api + '&units=metric')
         .then(res => res.json())
         .then(data => {
           this.city = data.name
